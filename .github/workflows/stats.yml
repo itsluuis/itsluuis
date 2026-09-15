@@ -10,7 +10,6 @@ on:
   push:
     branches:
       - main
-      - master
 
 jobs:
   build:
@@ -18,14 +17,21 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate GitHub Stats Cards
-        uses: jstrieb/github-stats@master
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          token: ${{ secrets.ACCESS_TOKEN }}
+          python-version: "3.11"
+
+      - name: Generate GitHub Stats Card
+        env:
+          GITHUB_USERNAME: itsluuis
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: python scripts/update_stats.py
 
       - name: Commit and Push Generated Images
         run: |
