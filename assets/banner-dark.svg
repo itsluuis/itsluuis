@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" role="img" aria-labelledby="title desc">
+  <title id="title">Lu's Terminal Profile</title>
+  <desc id="desc">Stealth terminal profile with morphing Moon and Spider Lily ASCII art.</desc>
+
+  <defs>
+    <!-- Background & Panel Fills -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#181818"/>
+      <stop offset="100%" stop-color="#111111"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes blinkDot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+    @keyframes statusPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.45; }
+    }
+
+    /* 40s Total Cycle: 20s Moon, 20s Flower (Dissolve Morph) */
+    @keyframes morphMoon {
+      0% { opacity: 1; }
+      45% { opacity: 1; }
+      50% { opacity: 0; }
+      95% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes morphFlower {
+      0% { opacity: 0; }
+      45% { opacity: 0; }
+      50% { opacity: 1; }
+      95% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    .layer-moon {
+      animation: morphMoon 40s infinite ease-in-out;
+    }
+    .layer-flower {
+      animation: morphFlower 40s infinite ease-in-out;
+    }
+    .live-dot { animation: blinkDot 1.8s infinite ease-in-out; }
+    .status-dot { animation: statusPulse 2.5s infinite ease-in-out; }
+    .ascii-text {
+      font-family: ui-monospace, SFMono-Regular, "Courier New", monospace;
+      font-weight: 600;
+      white-space: pre;
+    }
+  </style>
+
+  <!-- ================= OUTER TERMINAL WINDOW ================= -->
+  <rect x="1" y="1" width="1178" height="618" rx="10" fill="url(#bgGrad)" stroke="#2F2F2F" stroke-width="1.8"/>
+
+  <!-- Window Title Bar -->
+  <path d="M1 48 H1179" stroke="#2F2F2F" stroke-width="1.5"/>
+  
+  <!-- macOS Terminal Window Buttons (Minimalist / Subtle) -->
+  <circle cx="32" cy="25" r="5.5" fill="#FF5F56" opacity="0.85"/>
+  <circle cx="50" cy="25" r="5.5" fill="#FFBD2E" opacity="0.85"/>
+  <circle cx="68" cy="25" r="5.5" fill="#27C93F" opacity="0.85"/>
+
+  <!-- Centered Title -->
+  <text x="590" y="30" text-anchor="middle" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12" font-weight="600" letter-spacing="0.6">profile.sh --live</text>
+
+
+  <!-- ================= LEFT PANEL: VISUAL.MAP ================= -->
+  <rect x="30" y="72" width="425" height="518" rx="6" fill="url(#panelGrad)" stroke="#2F2F2F" stroke-width="1.5"/>
+  <path d="M30 110 H455" stroke="#2F2F2F" stroke-width="1.5"/>
+
+  <!-- Left Header -->
+  <text x="46" y="96" fill="#C9D1D9" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12" font-weight="700" letter-spacing="1.2">[ VISUAL.MAP ]</text>
+  <text x="438" y="96" text-anchor="end" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11">ASCII / 20s MORPH</text>
+
+  <!-- HUD Corner Brackets in #2F2F2F -->
+  <g stroke="#3A3A3A" stroke-width="2" fill="none">
+    <path d="M46 130 h14 M46 130 v14"/>
+    <path d="M439 130 h-14 M439 130 v14"/>
+    <path d="M46 540 h14 M46 540 v-14"/>
+    <path d="M439 540 h-14 M439 540 v-14"/>
+  </g>
+
+  <!-- ================= MORPHING ASCII LAYER 1: MOON ================= -->
+  <g class="layer-moon">
+    <text class="ascii-text" font-size="6.1" fill="#DDE7F5" letter-spacing="0.2">
+      <tspan x="48" y="155.0">                                :::                                 </tspan>
+      <tspan x="48" y="165.6">                              ==-.                                  </tspan>
+      <tspan x="48" y="176.2">                            ++=-.                                   </tspan>
+      <tspan x="48" y="186.8">                          +*+-:..                                   </tspan>
+      <tspan x="48" y="197.4">                        :*+=--::.                                   </tspan>
+      <tspan x="48" y="208.0">                       -*+=---::                                    </tspan>
+      <tspan x="48" y="218.6">                      -*+-=+=:.                                     </tspan>
+      <tspan x="48" y="229.2">                     ++=:-+=..                                      </tspan>
+      <tspan x="48" y="239.8">                    :+===++=:                                       </tspan>
+      <tspan x="48" y="250.4">                    ==---+=-..                                      </tspan>
+      <tspan x="48" y="261.0">                   :=----=-:...                                     </tspan>
+      <tspan x="48" y="271.6">                   +-----:::...                                     </tspan>
+      <tspan x="48" y="282.2">                   =--:---::::.                                     </tspan>
+      <tspan x="48" y="292.8">                  ------=--::.  :.                                  </tspan>
+      <tspan x="48" y="303.4">                  ---:--++--............                            </tspan>
+      <tspan x="48" y="314.0">                  ==-::-+*=-:....--:::-=.                           </tspan>
+      <tspan x="48" y="324.6">                  -=-:::--::--:.::-----:.                           </tspan>
+      <tspan x="48" y="335.2">                  :=--:::::::::-:.::::::.                           </tspan>
+      <tspan x="48" y="345.8">                   +--.::..:.:-==-:::::....                         </tspan>
+      <tspan x="48" y="356.4">                   +=:::......-===:::....                           </tspan>
+      <tspan x="48" y="367.0">                   :*=-:::::...::::......  . ..                     </tspan>
+      <tspan x="48" y="377.6">                    +#+---::.:..... ....:.                          </tspan>
+      <tspan x="48" y="388.2">                     %#*=:...:.. ... ...-.                          </tspan>
+      <tspan x="48" y="398.8">                      ###=::..:... ... .    ::                      </tspan>
+      <tspan x="48" y="409.4">                       ###+=:..:.....::.. . .. .                    </tspan>
+      <tspan x="48" y="420.0">                        *#=**=:.:::---=-.. :.. .                    </tspan>
+      <tspan x="48" y="430.6">                         *###**+-=---=+-.   ....  :.... .           </tspan>
+      <tspan x="48" y="441.2">                          .*##***++++++-..   .-: . .:::...          </tspan>
+      <tspan x="48" y="451.8">                            -##*###****+=:::::--.:::-::::           </tspan>
+      <tspan x="48" y="462.4">                              -###%%%#*##**+==---=---:::... .       </tspan>
+      <tspan x="48" y="473.0">                                .+####*****++=======-=-:..:.   :    </tspan>
+      <tspan x="48" y="483.6">                                   .*##*****+=++=------:::::: ..    </tspan>
+      <tspan x="48" y="494.2">                                       :*******++===---==----:.     </tspan>
+      <tspan x="48" y="504.8">                                             .--===+++=---.         </tspan>
+    </text>
+    <!-- Label for Moon -->
+    <text x="46" y="567" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" letter-spacing="0.6">MAP: LUNA // 34-LINE ASCII</text>
+  </g>
+
+  <!-- ================= MORPHING ASCII LAYER 2: SPIDER LILY ================= -->
+  <g class="layer-flower">
+    <text class="ascii-text" font-size="4.25" fill="#FF2A5F" letter-spacing="0.1">
+      <tspan x="40" y="142.0">                       .         .                                  </tspan>
+      <tspan x="40" y="149.5">                      ..         .                                     .    ..</tspan>
+      <tspan x="40" y="157.0">   .          .                                                        .    .         .</tspan>
+      <tspan x="40" y="164.5">   .         .                    .       .                                           .    .</tspan>
+      <tspan x="40" y="172.0">   .  .       .        .          .       .                           .     .         .    .</tspan>
+      <tspan x="40" y="179.5">      .   .    .        .         .       .                          ..     .        .    ..</tspan>
+      <tspan x="40" y="187.0">    . .   .    .        ..        .:      :                          ..    .        ..    ..  .</tspan>
+      <tspan x="40" y="194.5">   ... .   .    .        :        .=      :   ...                    .    ..        .    ..  ..</tspan>
+      <tspan x="40" y="202.0">   . ....   .   ..       .:        .-     =:+----=  :-...-:         :.   ..        ..   ...  .</tspan>
+      <tspan x="40" y="209.5">   .  ....  ..   .:       ..       .-. =++*+=#+:::.:=+#**##+=.     :.    .        ..   ...  . .</tspan>
+      <tspan x="40" y="217.0">    . .....  ..   .:       ::      .:- =----#: ... .::--::--+-.::::.    ..       .:   ...  . .</tspan>
+      <tspan x="40" y="224.5">    ...... .. ..   .-       .-.#####++=-:::=*.    .:::::::::+::::=++==::.       ..   :.:  ...  .</tspan>
+      <tspan x="40" y="232.0">     ......... .:.   :-   .--*@@#*=-::=::::=*-=:  .:::::.::::::-=*-.::::.      :.  ...- .: .. ..</tspan>
+      <tspan x="40" y="239.5">     .. .. .. :. .-.  .=..*-:: =:=-::::::::--:::. .::-+-:--::::=+.  ::.:.    .=   :..: .. ..  .</tspan>
+      <tspan x="40" y="247.0">      .. ... .:.:: .-.  .+-::.  .=-::::-::::+::::.=:-::::-..:::=*= :::...   :.  ...:. ...:.   ..</tspan>
+      <tspan x="40" y="254.5">        .  ... .: .=. -- .::::. *+--::::::::-::::---:::::...:::-..:::.....-.  ...-.  ..:.    ...</tspan>
+      <tspan x="40" y="262.0">      .  .. .... .-..=-..++::=#*=::::::::::::.:::==-::::...:::::.::::..:.. ....:.. :..:     . ..</tspan>
+      <tspan x="40" y="269.5">      .   ..  ..... .::.:-=+***+-::::::::::.::-::+=:.......:-::::::::::. ....:...:.::.  ...... .</tspan>
+      <tspan x="40" y="277.0">       .    ..  .. .:: ..-=::::-::::.:::::::::.-:=:.......:::::..::::.....:..:-..=.     ..::. ..</tspan>
+      <tspan x="40" y="284.5">       ..     ..  .....:--:::::...:::.::::.:::::--::....::::::..::::......::..-:       .::..  .</tspan>
+      <tspan x="40" y="292.0">        ..      ...   .::.-::=++====:::::::.::-.-::::.::--:::::::::........:.        ::..:.  .</tspan>
+      <tspan x="40" y="299.5">         ..       .-:+****++--==-::----::::::::-.:::.-==.:::::-:..........        :-. :-:   :.</tspan>
+      <tspan x="40" y="307.0">          ..   .===++**=::-----::::::::. .:::::-::::--..::::.  ...............==:. .-:..  ..</tspan>
+      <tspan x="40" y="314.5">            .  -+*+++*=. .....:::::::::::::::::::::::--:::::::......:::::::::..:::....   :.</tspan>
+      <tspan x="40" y="322.0">             .=+.          .-:::::::::::::--:::::.-:----:..-:.::==:..::---::::....-.   :.</tspan>
+      <tspan x="40" y="329.5">            =-:..       :-:::::--====--:...------.:.=:::::::::--:=-.:-+++===--:=-.. .=.</tspan>
+      <tspan x="40" y="337.0">           :::.  ..    .:::-=*++:..  ...:::.:-==::-=. ::-----::::---...-----::::::-..</tspan>
+      <tspan x="40" y="344.5">          .-::.    ....:::=*-:..:...:::...=..--=.:-=-   ...:+++=-:::::::::::.... ....</tspan>
+      <tspan x="40" y="352.0">           ::....    ..:::+::::::.......:. .=:+.:-====.      .===::::::.          ..</tspan>
+      <tspan x="40" y="359.5">           ........:::.:+-::::..:::....   .-.- ::===++-         :-::::..:.        ...</tspan>
+      <tspan x="40" y="367.0">             ..........-::::-+.          .:.: .::-=--=-           .:.......      ::..</tspan>
+      <tspan x="40" y="374.5">               ......::::::-*= .        :.-.  ::::::---.          ...........:-==-:.</tspan>
+      <tspan x="40" y="382.0">                     .:::::=.    .....::..    ::::::::-:           ........::::::::</tspan>
+      <tspan x="40" y="389.5">                      ::.::.                  ::.::::::.            ........:::::.</tspan>
+      <tspan x="40" y="397.0">                       ...::       .          .:...:.::.      ..    ........</tspan>
+      <tspan x="40" y="404.5">                         .......:::..          .........     ..............</tspan>
+      <tspan x="40" y="412.0">                           ..........          ..........     ...::::.....</tspan>
+      <tspan x="40" y="419.5">                            .......            ..........      .::--.</tspan>
+      <tspan x="40" y="427.0">                                                :........--      ..</tspan>
+      <tspan x="40" y="434.5">                                                :.......:::</tspan>
+      <tspan x="40" y="442.0">                                                : .........</tspan>
+      <tspan x="40" y="449.5">                                                :  ....   .</tspan>
+      <tspan x="40" y="457.0">                                                .</tspan>
+      <tspan x="40" y="464.5">                                                .</tspan>
+      <tspan x="40" y="472.0">                                                .</tspan>
+      <tspan x="40" y="479.5">                                                .</tspan>
+      <tspan x="40" y="487.0">                                                .</tspan>
+      <tspan x="40" y="494.5">                                                .</tspan>
+      <tspan x="40" y="502.0">                                                .</tspan>
+      <tspan x="40" y="509.5">                                                .</tspan>
+    </text>
+    <!-- Label for Flower -->
+    <text x="46" y="567" fill="#FF2A5F" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" letter-spacing="0.6">MAP: HIGANBANA // 50-LINE ASCII</text>
+  </g>
+
+  <!-- Left Footer Divider & Status -->
+  <path d="M30 550 H455" stroke="#2F2F2F" stroke-width="1.5"/>
+  <text x="438" y="567" text-anchor="end" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11">CYCLE: 20S</text>
+
+
+  <!-- ================= RIGHT PANEL: SYSTEM.INFO ================= -->
+  <rect x="475" y="72" width="675" height="518" rx="6" fill="url(#panelGrad)" stroke="#2F2F2F" stroke-width="1.5"/>
+  <path d="M475 110 H1150" stroke="#2F2F2F" stroke-width="1.5"/>
+
+  <!-- Right Header -->
+  <text x="492" y="96" fill="#C9D1D9" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12" font-weight="700" letter-spacing="1.2">SYSTEM.INFO</text>
+
+  <!-- Live Indicator Dot -->
+  <circle cx="985" cy="92" r="4.5" fill="#FF2A5F" class="live-dot"/>
+  <text x="998" y="96" fill="#FF2A5F" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" font-weight="700" letter-spacing="0.5">LIVE</text>
+
+  <!-- Clean Pill Badge in #2F2F2F -->
+  <rect x="1042" y="82" width="90" height="22" rx="4" fill="#242424" stroke="#3A3A3A" stroke-width="1.2"/>
+  <text x="1087" y="97" text-anchor="middle" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12" font-weight="600">@itsluuis</text>
+
+  <!-- System Info Key-Value Rows -->
+  
+    <!-- Row: Subject -->
+    <text x="492" y="158" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Subject</text>
+    <path d="M612 154h1M619 154h1M626 154h1M633 154h1M640 154h1M647 154h1M654 154h1M661 154h1M668 154h1M675 154h1M682 154h1M689 154h1M696 154h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="158" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">Lu</text>
+        
+
+    <!-- Row: Role -->
+    <text x="492" y="192" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Role</text>
+    <path d="M612 188h1M619 188h1M626 188h1M633 188h1M640 188h1M647 188h1M654 188h1M661 188h1M668 188h1M675 188h1M682 188h1M689 188h1M696 188h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="192" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">Frontend Developer · UI/UX Architect</text>
+        
+
+    <!-- Row: Origin -->
+    <text x="492" y="226" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Origin</text>
+    <path d="M612 222h1M619 222h1M626 222h1M633 222h1M640 222h1M647 222h1M654 222h1M661 222h1M668 222h1M675 222h1M682 222h1M689 222h1M696 222h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="226" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">Portugal</text>
+        
+
+    <!-- Row: Status -->
+    <text x="492" y="260" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Status</text>
+    <path d="M612 256h1M619 256h1M626 256h1M633 256h1M640 256h1M647 256h1M654 256h1M661 256h1M668 256h1M675 256h1M682 256h1M689 256h1M696 256h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="260" fill="#10B981" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">Building Financial App + Learning Mechatronics Fundamentals</text>
+        
+
+    <!-- Row: ToolChain -->
+    <text x="492" y="294" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">ToolChain</text>
+    <path d="M612 290h1M619 290h1M626 290h1M633 290h1M640 290h1M647 290h1M654 290h1M661 290h1M668 290h1M675 290h1M682 290h1M689 290h1M696 290h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="294" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">VS Code · Antigravity · Cosmos · Git</text>
+        
+
+    <!-- Row: Core.Lang -->
+    <text x="492" y="328" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Core.Lang</text>
+    <path d="M612 324h1M619 324h1M626 324h1M633 324h1M640 324h1M647 324h1M654 324h1M661 324h1M668 324h1M675 324h1M682 324h1M689 324h1M696 324h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="328" fill="#DDE7F5" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">TypeScript · Python</text>
+        
+
+    <!-- Row: Core.Focus -->
+    <text x="492" y="362" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Core.Focus</text>
+    <path d="M612 358h1M619 358h1M626 358h1M633 358h1M640 358h1M647 358h1M654 358h1M661 358h1M668 358h1M675 358h1M682 358h1M689 358h1M696 358h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="362" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">Personal Finance App Architecture</text>
+        
+
+    <!-- Row: Grid.LinkedIn -->
+    <text x="492" y="396" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Grid.LinkedIn</text>
+    <path d="M612 392h1M619 392h1M626 392h1M633 392h1M640 392h1M647 392h1M654 392h1M661 392h1M668 392h1M675 392h1M682 392h1M689 392h1M696 392h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="396" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">/in/luis-carlos-rodrigues-garcia</text>
+        
+
+    <!-- Row: Grid.GitHub -->
+    <text x="492" y="430" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Grid.GitHub</text>
+    <path d="M612 426h1M619 426h1M626 426h1M633 426h1M640 426h1M647 426h1M654 426h1M661 426h1M668 426h1M675 426h1M682 426h1M689 426h1M696 426h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="430" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">itsluuis</text>
+        
+
+    <!-- Row: Grid.Instagram -->
+    <text x="492" y="464" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="600">Grid.Instagram</text>
+    <path d="M612 460h1M619 460h1M626 460h1M633 460h1M640 460h1M647 460h1M654 460h1M661 460h1M668 460h1M675 460h1M682 460h1M689 460h1M696 460h1" stroke="#2F2F2F" stroke-width="1.5" shape-rendering="crispEdges"/>
+    <text x="715" y="464" fill="#E6EDF3" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" font-weight="500">@luuis_inrl</text>
+        
+
+  <!-- Right Panel Footer Status Bar -->
+  <path d="M475 550 H1150" stroke="#2F2F2F" stroke-width="1.5"/>
+  
+  <circle cx="496" cy="567" r="4" fill="#10B981" class="status-dot"/>
+  <text x="508" y="571" fill="#10B981" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" font-weight="600" letter-spacing="0.6">ALL SYSTEMS NOMINAL</text>
+  
+  <text x="1132" y="571" text-anchor="end" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" letter-spacing="0.5">UTC+0 · PORTUGAL NODE</text>
+
+</svg>

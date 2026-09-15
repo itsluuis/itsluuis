@@ -1,0 +1,18 @@
+<USER_REQUEST>
+primero antes de seguir me gustaria que hicieramos algunos cambios para que quede mas como me gustaria a mi
+lo primero cambia el color azul de todo en general y ponlo mejor en este color: #2F2F2F, eso incluye la estructura como tal y tambien el overview
+segundo, no se si eso cambia despues de hacer la configuracion pero en caso de que no lo haga, por favor quitale todos los emojis quiero que el diseño se mantenga en lo profesional osea solo numeros nada de emojis que rompan con la armonia
+tercero, no me gusta el ASCII art como esta ahorita y no me sirve si quiero que se haga un morph entre uno y el otro asi que me tome el tiempo de hacerlos yo mismo y son los dos archivos adjuntos, acuerdate que necesito que cada 20 segundos haga morph para cambiar entre una y la otra
+Una vez hayas hecho estos cambios bien me vuelves a explicar que hay que hacer para implementar tdo de forma correcta
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-15T00:18:59-04:00.
+
+The user's current state is as follows:
+Active Document: c:\Users\HP\Documents\Vs Code\apps\Yio\README.md (LANGUAGE_MARKDOWN)
+Cursor is on line: 1
+Other open documents:
+- c:\Users\HP\Documents\Vs Code\apps\Yio\.github\workflows\stats.yml (LANGUAGE_YAML)
+- c:\Users\HP\Documents\Vs Code\apps\Yio\README.md (LANGUAGE_MARKDOWN)
+No browser pages are currently open.
+</ADDITIONAL_METADATA>

@@ -1,0 +1,35 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    # Se ejecuta todos los días a medianoche UTC
+    - cron: "0 0 * * *"
+  # Permite ejecutarlo manualmente con un clic desde la pestaña "Actions"
+  workflow_dispatch:
+  # Se ejecuta automáticamente al hacer push a la rama principal
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    name: Generate Stats Images
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate GitHub Stats Cards
+        uses: jstrieb/github-stats@master
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Commit and Push Generated Images
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add generated/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update GitHub stats [skip ci]" && git push)
