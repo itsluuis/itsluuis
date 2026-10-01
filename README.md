@@ -37,4 +37,6 @@ I started my journey when i was 13 with a few simple games in **Game Maker Studi
 [![instagram](https://img.shields.io/badge/Instagram-luuis__inrl-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=000000)](https://www.instagram.com/luuis_inrl?stkn=c3NpN3RiM2dmNnhj&utm_source=qr)
 [![Gmail](https://img.shields.io/badge/Gmail-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000000
 )](mailto:its.luiscarlos.rodrigues@gmail.com)
+![Viws](https://komarev.com/ghpvc/?username=itsluuis&style=for-the-badge&color=red)
+
 
