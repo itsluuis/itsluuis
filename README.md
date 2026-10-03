@@ -15,7 +15,7 @@ I am a university student with certification in public speaking with practical e
 
 
 Since I was a child I was always fascinated by the world of computers and how they work,
-I started my journey when i was 13 with a few simple games in **Game Maker Studio 2 (GML2)**, Later on, I discovered a new brand of possibilities with other lenguajes but my real focus was on **Web Development** because i realy enjoy the time when i had to desing the style and identity of my games
+I started my journey when i was 13 with a few simple games in **Game Maker Studio 2 (GML2)**, Later on, I discovered a new brand of possibilities with other lenguajes but my real focus was on **Web Development** because i realy enjoy the time when i had to desing the style and identity of my games.
 
 - **Current Directive**: Architecting and engineering an intuitive, high-performance Personal Finance Application focused on clear data visualization and user sovereignty.
 - **Autonomous Learning**: Diving deep into Mechatronics Fundamentals, bridging software architecture with physical automation, sensors, and robotics.
